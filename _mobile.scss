@@ -1,0 +1,250 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font;
+  font-weight: 500;
+  overflow-x: hidden;
+}
+
+section,
+header,
+footer {
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.wrapper {
+  width: Min(1100px, 90%);
+  margin: auto;
+  @include flex(column, center, center);
+}
+
+.title {
+  margin: 1rem 0;
+  color: $v-dark-blue;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.text {
+  color: $grayish-violet;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.cta {
+  padding: 1rem 2.5rem;
+  background-color: $cyan;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: $font;
+  border: none;
+  border-radius: 2rem;
+}
+
+// Navigation
+header {
+  padding: 1.5rem 0 0 0;
+}
+
+.header--wrapper {
+  @include flex(row, space-between, center);
+  padding: 1rem 0;
+}
+
+.line {
+  width: 1.6rem;
+  height: 0.15rem;
+  margin: 0.4rem;
+  background: gray;
+  pointer-events: none;
+}
+
+.navigation {
+  display: none;
+}
+
+// Hero section
+.hero {
+  min-height: 100vh;
+}
+
+#hero__illustration {
+  max-height: 40vh;
+  align-self: flex-start;
+  order: -1;
+}
+
+.title--big {
+  margin-top: 2.5rem;
+  font-size: 2.7rem;
+  line-height: 1.2;
+}
+
+.text--big {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+// Shorten section
+.shorten {
+  @include flex(row, center, auto);
+}
+
+.shorten-wrapper {
+  position: absolute;
+  background-color: $dark-violet;
+  color: white;
+  border-radius: 0.7rem;
+  transform: translate(0, -45%);
+}
+
+#shorten-bg {
+  width: 80%;
+}
+
+.input-wrapper {
+  position: absolute;
+  width: 87%;
+}
+
+.shorten__input,
+.shorten--cta {
+  width: 100%;
+  margin: 0.7rem 0;
+  padding: 0.7rem;
+  font-size: 1.1rem;
+  font-family: $font;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.shorten__input {
+  font-size: 1rem;
+  &::placeholder {
+    color: hsl(0, 0%, 45%);
+  }
+}
+
+// Features section
+.features {
+  min-height: 100vh;
+  padding-top: 8rem;
+  background-color: $light-violet;
+}
+
+.card-wrapper {
+  position: relative;
+}
+
+.linking-line {
+  position: absolute;
+  margin: 25% 49%;
+  height: 65%;
+  padding: 0.25rem;
+  background-color: $cyan;
+}
+
+.card {
+  position: relative;
+  background-color: white;
+  margin: 5rem 0;
+  padding: 4rem 1.5rem 2.5rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.card__icon {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: Min(5.2rem, 90px);
+  padding: 1.3rem;
+  background-color: $dark-violet;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title--small {
+  font-size: 1.3rem;
+}
+
+// Last CTA section
+.last-cta {
+  position: relative;
+  max-height: 300px;
+  padding: 0;
+  background-color: $dark-violet;
+  color: white;
+}
+
+.last-cta--wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.title--light {
+  color: white;
+}
+
+.cta--long {
+  padding: 1rem 3rem;
+}
+
+// Footer
+footer {
+  background-color: $v-dark-violet;
+  color: white;
+}
+
+.footer--wrapper {
+  margin: 2rem auto;
+}
+
+.footer__item {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.title--footer {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.footer__link {
+  font-size: 0.9rem;
+  color: $gray;
+}
+
+.footer__link + .footer__link {
+  margin-top: 0.5rem;
+}
+
+.footer__socials {
+  width: 55%;
+}
+
+.footer__links--social {
+  @include flex(row, space-between, center);
+}
+
+.attribution {
+  margin: 1rem auto;
+  font-size: 0.7rem;
+  color: $gray;
+  a {
+    color: $light-violet;
+  }
+}
