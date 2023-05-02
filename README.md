@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/lidiakrajewska/url-shortening-api-master](https://github.com/lidiakrajewska/url-shortening-api-master)
+- Live Site URL: [https://lidiakrajewska.github.io/url-shortening-api-master/](https://lidiakrajewska.github.io/url-shortening-api-master/)
 
 ## My process
 
@@ -69,8 +69,8 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- LinkedIn - [Lidia Krajewska](https://www.linkedin.com/in/lidia-krajewska-02512a1a7/)
+- Frontend Mentor - [@lidiakrajewska](https://www.frontendmentor.io/profile/lidiakrajewska)
 
 ## Acknowledgments
 
