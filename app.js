@@ -15,18 +15,30 @@ function adjustImgSrc(screenWidth) {
   }
 }
 
-// Shortening links
 const shortenBtn = document.querySelector(".shorten--cta");
 const shortenedLinksDiv = document.querySelector(".shortened-links");
 
 shortenBtn.addEventListener("click", shorten);
 
-function shorten() {
-  const input = document.querySelector(".shorten__input").value;
-  createLinkElement(input);
+const apiEndpoint = "https://api.shrtco.de/v2/";
+
+// Fetching APIs with an asynchronus function
+async function fetchAPI(url) {
+  const dataFetch = await fetch(url);
+  const data = await dataFetch.json();
+  return data;
 }
 
-function createLinkElement(input) {
+// Shortening links with API
+async function shorten() {
+  const input = document.querySelector(".shorten__input").value;
+  const apiResponse = await fetchAPI(apiEndpoint + "shorten?url=" + input);
+  const shortened = apiResponse.result.full_short_link;
+  createLinkElement(input, shortened);
+}
+
+// Creating HTML elements that display links
+function createLinkElement(input, shortened) {
   // Shortened link wrapper
   const linkDiv = document.createElement("div");
   linkDiv.classList.add("shortened-link-wrapper");
@@ -35,7 +47,7 @@ function createLinkElement(input) {
   link.innerText = input;
   // Shortened link
   const shortenedLink = document.createElement("p");
-  shortenedLink.innerText = "SHORTENED";
+  shortenedLink.innerText = shortened;
   // Copy button
   const copyButton = document.createElement("button");
   copyButton.innerText = "Copy";
