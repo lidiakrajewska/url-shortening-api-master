@@ -58,7 +58,7 @@
   }
 
   .title--big {
-    font-size: 4.5rem;
+    font-size: 5rem;
     margin-bottom: 0rem;
   }
 
@@ -72,7 +72,7 @@
     max-height: 60vh;
     align-self: auto;
     order: 0;
-    transform: translate(83%);
+    transform: translate(90%);
   }
 
   // Shorten section
@@ -95,6 +95,30 @@
     flex: 1;
   }
 
+  .shortened-links__item {
+    flex-direction: row;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .original-link {
+    padding: 0;
+  }
+
+  .shortened-link-wrapper {
+    @include flex(row, flex-end, center);
+    padding: 0rem;
+    border-top: none;
+  }
+
+  .copy-btn {
+    width: auto;
+    padding: 0.6rem 2rem;
+    margin: 0 0 0 2rem;
+  }
+
+  // Features section
+
   // Last CTA section
   .last-cta {
     max-height: 250px;
@@ -103,5 +127,23 @@
 
   #last-bg {
     width: 100%;
+  }
+
+  // Footer
+  .footer--wrapper {
+    @include flex(row, space-between, flex-start);
+  }
+
+  .footer__item {
+    margin: 0;
+    text-align: left;
+  }
+
+  .title--footer {
+    margin: 0 0 1rem 0;
+  }
+
+  .footer__socials {
+    width: 15%;
   }
 }

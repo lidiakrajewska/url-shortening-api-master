@@ -214,6 +214,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  margin-top: 1.5rem;
   background: white;
   border-radius: 7px;
 }
@@ -245,8 +246,12 @@ header {
 
 .features {
   min-height: 100vh;
-  padding-top: 8rem;
+  padding-top: 4.5rem;
   background-color: #f0eff5;
+}
+
+.features h2 {
+  padding-top: 4.5rem;
 }
 
 .card-wrapper {
@@ -464,7 +469,7 @@ footer {
     text-align: left;
   }
   .title--big {
-    font-size: 4.5rem;
+    font-size: 5rem;
     margin-bottom: 0rem;
   }
   .text--big {
@@ -480,8 +485,8 @@ footer {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
-    -webkit-transform: translate(83%);
-            transform: translate(83%);
+    -webkit-transform: translate(90%);
+            transform: translate(90%);
   }
   #shorten-bg {
     width: 100%;
@@ -515,12 +520,70 @@ footer {
         -ms-flex: 1;
             flex: 1;
   }
+  .shortened-links__item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+  }
+  .original-link {
+    padding: 0;
+  }
+  .shortened-link-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0rem;
+    border-top: none;
+  }
+  .copy-btn {
+    width: auto;
+    padding: 0.6rem 2rem;
+    margin: 0 0 0 2rem;
+  }
   .last-cta {
     max-height: 250px;
     overflow: hidden;
   }
   #last-bg {
     width: 100%;
+  }
+  .footer--wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .footer__item {
+    margin: 0;
+    text-align: left;
+  }
+  .title--footer {
+    margin: 0 0 1rem 0;
+  }
+  .footer__socials {
+    width: 15%;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -54,6 +54,8 @@ Users should be able to:
 ### Continued development
 
 - how to make logo a different colour?
+- give logo in the footer more space
+- break text on desktop
 - hover etc states
 - tablet / desktop view
 - navigation on moblie

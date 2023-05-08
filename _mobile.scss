@@ -150,6 +150,7 @@ header {
 .shortened-links__item {
   @include flex(column, center, center);
   width: 100%;
+  margin-top: 1.5rem;
   background: white;
   border-radius: 7px;
 }
@@ -182,8 +183,12 @@ header {
 // Features section
 .features {
   min-height: 100vh;
-  padding-top: 8rem;
+  padding-top: 4.5rem;
   background-color: $light-violet;
+
+  h2 {
+    padding-top: 4.5rem;
+  }
 }
 
 .card-wrapper {
