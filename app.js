@@ -40,20 +40,26 @@ async function shorten() {
 // Creating HTML elements that display links
 function createLinkElement(input, shortened) {
   // Shortened link wrapper
-  const linkDiv = document.createElement("div");
-  linkDiv.classList.add("shortened-link-wrapper");
+  const shortenedItem = document.createElement("div");
+  shortenedItem.classList.add("shortened-links__item");
   // Original link
   const link = document.createElement("p");
   link.innerText = input;
+  link.classList.add("original-link");
+  shortenedItem.appendChild(link);
   // Shortened link
+  const shortenedLinkWrapper = document.createElement("div");
+  shortenedLinkWrapper.classList.add("shortened-link-wrapper");
   const shortenedLink = document.createElement("p");
   shortenedLink.innerText = shortened;
+  shortenedLink.classList.add("shortened-link");
+  shortenedLinkWrapper.appendChild(shortenedLink);
   // Copy button
   const copyButton = document.createElement("button");
   copyButton.innerText = "Copy";
+  copyButton.classList.add("copy-btn");
+  shortenedLinkWrapper.appendChild(copyButton);
 
-  linkDiv.appendChild(link);
-  linkDiv.appendChild(shortenedLink);
-  linkDiv.appendChild(copyButton);
-  shortenedLinksDiv.appendChild(linkDiv);
+  shortenedItem.appendChild(shortenedLinkWrapper);
+  shortenedLinksDiv.appendChild(shortenedItem);
 }

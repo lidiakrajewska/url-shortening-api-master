@@ -47,20 +47,20 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- [shrtcode API](https://shrtco.de/docs)
 
 ### What I learned
 
 ### Continued development
 
 - how to make logo a different colour?
-- shorten size and rounded corners on mobile/desktop
 - hover etc states
 - tablet / desktop view
 - navigation on moblie
-- style links elements properly
 - copy with one click
 - error message
 - links saved after refreshing
+- long links ending in ...
 
 ### Useful resources
 

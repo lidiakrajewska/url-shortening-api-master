@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -20,7 +24,7 @@ footer {
 }
 
 .wrapper {
-  width: Min(1100px, 90%);
+  width: Min(1100px, 87%);
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -54,7 +58,7 @@ ul {
   list-style-type: none;
 }
 
-.cta {
+button {
   padding: 1rem 2.5rem;
   background-color: #2acfcf;
   color: white;
@@ -100,6 +104,7 @@ header {
 
 .hero {
   min-height: 100vh;
+  padding-bottom: 7rem;
 }
 
 #hero__illustration {
@@ -140,6 +145,7 @@ header {
 
 .shorten-wrapper {
   position: absolute;
+  min-height: 10rem;
   background-color: #3b3054;
   color: white;
   border-radius: 0.7rem;
@@ -149,7 +155,8 @@ header {
 }
 
 #shorten-bg {
-  width: 80%;
+  -webkit-transform: translate(20%, -10%);
+          transform: translate(20%, -10%);
 }
 
 .input-wrapper {
@@ -186,6 +193,54 @@ header {
 
 .shorten__input::placeholder {
   color: #737373;
+}
+
+.shortened-links {
+  width: 100%;
+}
+
+.shortened-links__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background: white;
+  border-radius: 7px;
+}
+
+.original-link {
+  width: 100%;
+  padding: 0.9rem;
+  text-align: left;
+}
+
+.shortened-link-wrapper {
+  padding: 0.9rem;
+  width: 100%;
+  border-top: solid 1px #f0eff5;
+}
+
+.shortened-link {
+  text-align: left;
+  color: #2acfcf;
+}
+
+.copy-btn {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  border-radius: 7px;
 }
 
 .features {
@@ -384,6 +439,8 @@ footer {
     display: -ms-flexbox;
     display: flex;
     min-height: 70vh;
+    padding-bottom: 0;
+    margin-bottom: 2.5rem;
   }
   .hero--wrapper {
     display: -webkit-box;
@@ -428,6 +485,8 @@ footer {
   }
   #shorten-bg {
     width: 100%;
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
   }
   .input-wrapper {
     display: -webkit-box;
@@ -455,6 +514,13 @@ footer {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+  }
+  .last-cta {
+    max-height: 250px;
+    overflow: hidden;
+  }
+  #last-bg {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
