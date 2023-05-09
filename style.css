@@ -530,6 +530,9 @@ footer {
   }
   .original-link {
     padding: 0;
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
   }
   .shortened-link-wrapper {
     display: -webkit-box;
@@ -547,11 +550,61 @@ footer {
             align-items: center;
     padding: 0rem;
     border-top: none;
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
   }
   .copy-btn {
     width: auto;
     padding: 0.6rem 2rem;
     margin: 0 0 0 2rem;
+  }
+  .features h2 {
+    padding-top: 6rem;
+    font-size: 2.5rem;
+  }
+  .features .wrapper > .text {
+    font-size: 1.1rem;
+    width: 47%;
+  }
+  .card-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 60vh;
+  }
+  .linking-line {
+    margin: 25% 49%;
+    height: 0;
+    width: 65%;
+    background-color: #2acfcf;
+  }
+  .card {
+    text-align: left;
+  }
+  .card + .card {
+    margin-left: 2rem;
+  }
+  .card:nth-of-type(2) {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .card:nth-of-type(4) {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .card__icon {
+    left: 20%;
   }
   .last-cta {
     max-height: 250px;

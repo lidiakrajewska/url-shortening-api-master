@@ -103,12 +103,14 @@
 
   .original-link {
     padding: 0;
+    flex: 3;
   }
 
   .shortened-link-wrapper {
     @include flex(row, flex-end, center);
     padding: 0rem;
     border-top: none;
+    flex: 2;
   }
 
   .copy-btn {
@@ -118,6 +120,47 @@
   }
 
   // Features section
+  .features {
+    h2 {
+      padding-top: 6rem;
+      font-size: 2.5rem;
+    }
+    & .wrapper > .text {
+      font-size: 1.1rem;
+      width: 47%;
+    }
+  }
+
+  .card-wrapper {
+    @include flex(row, center, center);
+    min-height: 60vh;
+  }
+
+  .linking-line {
+    margin: 25% 49%;
+    height: 0;
+    width: 65%;
+    background-color: $cyan;
+  }
+
+  .card {
+    text-align: left;
+    & + .card {
+      margin-left: 2rem;
+    }
+  }
+
+  .card:nth-of-type(2) {
+    align-self: flex-start;
+  }
+
+  .card:nth-of-type(4) {
+    align-self: flex-end;
+  }
+
+  .card__icon {
+    left: 20%;
+  }
 
   // Last CTA section
   .last-cta {
