@@ -53,10 +53,9 @@ Users should be able to:
 
 ### Continued development
 
-- how to make logo a different colour?
-- hover etc states
+- make logo a different colour
+- social links cyan on hover
 - tablet view
-- navigation on moblie
 - copy with one click
 - error message
 - links saved after refreshing

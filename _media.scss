@@ -1,6 +1,13 @@
 @media screen and (min-width: 1440px) {
   .cta {
     padding: 0.9rem 3rem;
+    transition: all 0.2s;
+    &:hover {
+      background: hsl(180, 57%, 77%);
+      cursor: pointer;
+      background: hsl(180, 57%, 77%);
+      cursor: pointer;
+    }
   }
 
   // Navigation
@@ -21,8 +28,17 @@
 
   .nav {
     @include flex(row, space-between, center);
-    color: $grayish-violet;
     font-weight: 700;
+    a {
+      color: $grayish-violet;
+      transition: all 0.2s;
+    }
+  }
+
+  .nav__item:not(.cta):hover {
+    a {
+      color: black;
+    }
   }
 
   .nav--1 {
@@ -33,8 +49,12 @@
     width: 22%;
 
     .cta {
+      width: auto;
       padding: 0.6rem 1.6rem;
       font-size: 0.9rem;
+      a {
+        color: white;
+      }
     }
   }
 
@@ -191,6 +211,14 @@
 
   .title--footer {
     margin: 0 0 1rem 0;
+  }
+
+  .footer__link {
+    transition: color 0.2s;
+    &:hover {
+      color: $cyan;
+      cursor: pointer;
+    }
   }
 
   .footer__socials {
