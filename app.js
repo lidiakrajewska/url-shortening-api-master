@@ -17,10 +17,13 @@ function adjustImgSrc(screenWidth) {
 
 const shortenBtn = document.querySelector(".shorten--cta");
 const shortenedLinksDiv = document.querySelector(".shortened-links");
+const apiEndpoint = "https://api.shrtco.de/v2/";
+
+const burger = document.querySelector(".burger");
+const mobileMenu = document.querySelector(".navigation");
 
 shortenBtn.addEventListener("click", shorten);
-
-const apiEndpoint = "https://api.shrtco.de/v2/";
+burger.addEventListener("click", menu);
 
 // Fetching APIs with an asynchronus function
 async function fetchAPI(url) {
@@ -37,7 +40,7 @@ async function shorten() {
   createLinkElement(input, shortened);
 }
 
-// Creating HTML elements that display links
+// Creating HTML elements that display shortened links
 function createLinkElement(input, shortened) {
   // Shortened link wrapper
   const shortenedItem = document.createElement("div");
@@ -62,4 +65,19 @@ function createLinkElement(input, shortened) {
 
   shortenedItem.appendChild(shortenedLinkWrapper);
   shortenedLinksDiv.appendChild(shortenedItem);
+}
+
+// Opening and closing mobile menu
+function menu() {
+  burger.classList.toggle("open");
+  if (burger.classList.contains("open")) {
+    mobileMenu.classList.add("navigation--open");
+    setTimeout(() => {
+      mobileMenu.classList.add("navigation--open--active");
+    }, 100);
+  }
+  if (!burger.classList.contains("open")) {
+    mobileMenu.classList.remove("navigation--open");
+    mobileMenu.classList.remove("navigation--open--active");
+  }
 }
