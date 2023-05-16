@@ -186,6 +186,20 @@ header {
   }
 }
 
+.error-msg {
+  display: none;
+  position: absolute;
+  bottom: -30%;
+  color: $red;
+}
+
+.error {
+  outline: solid 2px $red;
+  &::placeholder {
+    color: $red;
+  }
+}
+
 .shortened-links {
   width: 100%;
 }

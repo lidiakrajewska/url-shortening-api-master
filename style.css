@@ -195,6 +195,23 @@ header {
   color: hsl(0, 0%, 45%);
 }
 
+.error-msg {
+  display: none;
+  position: absolute;
+  bottom: -30%;
+  color: hsl(0, 87%, 67%);
+}
+
+.error {
+  outline: solid 2px hsl(0, 87%, 67%);
+}
+.error::-moz-placeholder {
+  color: hsl(0, 87%, 67%);
+}
+.error::placeholder {
+  color: hsl(0, 87%, 67%);
+}
+
 .shortened-links {
   width: 100%;
 }

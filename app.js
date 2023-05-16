@@ -15,13 +15,19 @@ function adjustImgSrc(screenWidth) {
   }
 }
 
+const input = document.querySelector(".shorten__input");
 const shortenBtn = document.querySelector(".shorten--cta");
 const shortenedLinksDiv = document.querySelector(".shortened-links");
+const errorMsg = document.querySelector(".error-msg");
 const apiEndpoint = "https://api.shrtco.de/v2/";
 
 const burger = document.querySelector(".burger");
 const mobileMenu = document.querySelector(".navigation");
 
+input.addEventListener("input", () => {
+  errorMsg.style.display = "none";
+  input.classList.remove("error");
+});
 shortenBtn.addEventListener("click", shorten);
 burger.addEventListener("click", menu);
 
@@ -34,10 +40,16 @@ async function fetchAPI(url) {
 
 // Shortening links with API
 async function shorten() {
-  const input = document.querySelector(".shorten__input").value;
-  const apiResponse = await fetchAPI(apiEndpoint + "shorten?url=" + input);
+  // Check if not empty
+  if (input.value == "") {
+    displayError();
+    return;
+  }
+  const apiResponse = await fetchAPI(
+    apiEndpoint + "shorten?url=" + input.value
+  );
   const shortened = apiResponse.result.full_short_link;
-  createLinkElement(input, shortened);
+  createLinkElement(input.value, shortened);
 }
 
 // Creating HTML elements that display shortened links
@@ -80,4 +92,10 @@ function menu() {
     mobileMenu.classList.remove("navigation--open");
     mobileMenu.classList.remove("navigation--open--active");
   }
+}
+
+// Display error
+function displayError() {
+  errorMsg.style.display = "block";
+  input.classList.add("error");
 }
